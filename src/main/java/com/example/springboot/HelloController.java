@@ -1,5 +1,6 @@
 package com.example.springboot;
 
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,9 +12,10 @@ public class HelloController {
         return "Hello World";
     }
 
-    @GetMapping("/")
-        String hello() {
-        return "Deployed";
+    @GetMapping("/hello")
+        public String welcome(@RequestParam(value = "name", defaultValue = "world")String name) {
+        return String.format("Hello, %s", name);
     }
+
 
 }
