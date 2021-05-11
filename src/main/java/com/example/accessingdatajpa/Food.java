@@ -1,4 +1,4 @@
-package com.example.springboot;
+package com.example.accessingdatajpa;
 
 public class Food {
     private final String name;
