@@ -14,8 +14,9 @@ public class HelloController {
         return "Hello World";
     }
 
-    //@GetMapping("/hello")
-    //public String welcome(@RequestParam(value = "name", defaultValue = "world")String name) {
-     //   return String.format("Hello, %s", name);
+    @GetMapping("/hello")
+    public String welcome(@RequestParam(value = "name", defaultValue = "world") String name) {
+        return String.format("Hello, %s", name);
     }
+}
 
