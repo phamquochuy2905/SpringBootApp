@@ -1,19 +1,34 @@
 package com.example.accessingdatajpa;
 
-public class Food {
-    private final String name;
-    private final String id;
-    private final String location;
+import org.springframework.beans.factory.annotation.Autowired;
 
-    public Food (String name, String id, String location) {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Food {
+
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private String name ;
+    private Long id;
+    private String origin;
+
+
+    public Food () {
         this.name = name;
         this.id = id;
-        this.location = location;
+        this.origin = origin;
     }
 
-    public String getId() {return id;}
+    public Long getId() {return id;}
 
     public String getName() {return name;}
 
-    public String getLocation() {return location;}
+    public String getOrigin() {return origin;}
+
+
 }
