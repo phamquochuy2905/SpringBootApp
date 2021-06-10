@@ -4,4 +4,5 @@ public class ViewNames {
     public static final String INDEX = "index";
     public static final String FOOD = "food";
     public static final String LOGIN = "login";
+    public static final String REGISTRATION = "registration";
 }

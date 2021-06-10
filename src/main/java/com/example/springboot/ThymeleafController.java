@@ -22,4 +22,9 @@ public class ThymeleafController {
     public ModelAndView Login() {
         return new ModelAndView(ViewNames.LOGIN);
     }
+
+    @GetMapping(path = Endpoints.REGISTRATION)
+    public ModelAndView Registration() {
+        return new ModelAndView(ViewNames.REGISTRATION);
+    }
 }
