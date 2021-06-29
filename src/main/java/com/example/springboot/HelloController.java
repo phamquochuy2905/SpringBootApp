@@ -14,9 +14,9 @@ import org.springframework.web.servlet.ModelAndView;
 public class HelloController {
 
 
-    @RequestMapping("/")
-    public String index() {
-        return "Welcome to Food Map!";
+   @RequestMapping("/")
+    public String home() {
+        return "index";
     }
 
     @GetMapping("/hello")
