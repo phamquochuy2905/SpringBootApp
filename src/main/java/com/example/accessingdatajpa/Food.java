@@ -16,12 +16,14 @@ public class Food {
     private String name ;
     private Long id;
     private String origin;
+    private String location;
 
 
     public Food () {
         this.name = name;
         this.id = id;
         this.origin = origin;
+        this.location = location;
     }
 
     public Long getId() {return id;}
@@ -30,5 +32,6 @@ public class Food {
 
     public String getOrigin() {return origin;}
 
+    public String getLocation() { return location;}
 
 }
